@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luka Drobnjak">
+    <title>Prijava</title>
+    <link rel="stylesheet" href="../CSS/prijava.css">
+    <link rel="icon" type="image/x-icon" href="../IMG/tabLogo4.png">
+    
+</head>
+<body>
+        <!-- Navigacija logo i burger meni -->
+        <header class="header">
+            <div class="logo">
+                <a href="logo.html"><img src="../IMG/logo99.png" alt="logo slika"></a>
+            </div>
+    
+            <div class="navigation">
+    
+                <input type="checkbox" class="toggle-menu">
+                <div class="hamburger"></div>
+    
+                <ul class="meni">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="prijava.html">Prijava</a></li>
+                    <li><a href="galerija.html">Destinacije</a></li>
+                    <li><a href="iskustva.html">Iskustva</a></li>
+                </ul>    
+            </div>
+        </header>
+    
+        <div class="wrapp">
+            <form id="prijava_" class="prijava" name="prijava" method="post" onsubmit="return redirect()">
+                <p>Registracijom na našem sajtu dobijate titulu našeg vernog klijenta ! Među prvima ćete dobijati najnovije ponude putem imejla i u svakom trenutku ulaskom na sajt možete videti sve što je aktuelno. Ali ono što je najvrednije jesu razne pogodnosti, poput popusta, vaučera i sličnog, koje ostvarujete kao registrovani član!</p><br>
+                <p>Nemate nalog? Možete se registrovati <a id="nema_nalog" href="log_in.html">ovde.</a></p><br>
+
+                <label for="username" name="username">KORISNIČKO IME:    </label>
+                <input type="text" required name="username" id="username" class="input" placeholder="Korisničko ime.."><br><br>
+    
+                <label for="password" name="password">ŠIFRA:    </label>
+                <input type="password" required name="password" id="password" class="input" minlength="8" placeholder="Šifra.."><br><br><br>
+
+                <button id="btn_prijava" type="submit" value="Posalji">PRIJAVA</button><br><br>
+            </form>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="../JS/prijava.js"></script>
+</body>
+</html>

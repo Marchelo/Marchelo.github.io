@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luka Drobnjak">
+    <title>Registracija</title>
+    <link rel="stylesheet" href="../CSS/log_in.css">
+    <link rel="icon" type="image/x-icon" href="../IMG/tabLogo4.png">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="logo.html"><img src="../IMG/logo99.png" alt="logo slika"></a>
+        </div>
+
+        <div class="navigation">
+
+            <input type="checkbox" class="toggle-menu">
+            <div class="hamburger"></div>
+
+            <ul class="meni">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="prijava.html">Prijava</a></li>
+                <li><a href="galerija.html">Destinacije</a></li>
+                <li><a href="iskustva.html">Iskustva</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="wrapp">
+    <form id="prijava_" class="prijava" name="prijava" method="post" onsubmit="return redirect()">
+
+            <label for="ime" name="ime">IME:    </label>
+            <input type="text" id="ime" required name="ime" class="input ime" placeholder="Unesite ime.." width="300px"><br><br>
+
+            <label for="prezime" name="prezime">PREZIME:    </label>
+            <input type="text" id="prezime" required name="prezime" class="input prezime" placeholder="Unesite prezime.."><br><br>
+
+            <label for="datumRodjenja" name="datumRodjenja">DATUM ROĐENJA:    </label>
+            <input type="date" id="datum" name="datumRodjenja" class="input"><br><br>    
+
+            <!-- dodatna ograničenja na tip karaktera, dužinu stringa, prilagoditi css za polja koja nisu validno popunjena itd.)  -->
+
+            <p>POL:</p>
+            <input type="radio" name="pol" value="muski" id="pol"><label for="pol">Muški</label>
+            <input type="radio" name="pol" value="zenski" id="pol"><label for="pol">Ženski</label><br><br>
+
+            <label>GRAD:</label>
+            <select name="smer" class="input" id="lista">
+                <optgroup name="ISIT" label="Beograd" value="Beograd">
+                    <option name="BG" value="Beograd">Beograd</option>
+                    <option name="NBG" value="Novi Beograd">Novi Beograd</option>
+                    <option name="CK" value="Čukarica">Čukarica</option>
+                    <option name="VZ" value="Voždovac">Voždovac</option>
+                    <option name="SG" value="Stari Grad">Stari Grad</option>
+                    <option name="VC" value="Vračar">Vračar</option>
+                    <option name="ŽR" value="Žarkovo">Žarkovo</option>
+                    <option name="PA" value="Palilula">Palilula</option>
+                </optgroup>
+                <option name="NS" value="Novi Sad">Novi Sad</option>
+                <option name="NP" value="Novi Pazar">Novi Pazar</option>
+                <option name="NIS" value="Niš">Niš</option>
+                <option name="KG" value="Kragujevac">Kragujevac</option>
+                <option name="VB" value="Vrnjačka Banja">Vrnjačka Banja</option>
+                <option name="SB" value="Subotica">Subotica</option>                    
+            </select><br><br>
+
+            <label for="email" name="email">EMAIL:    </label>
+            <input type="email" id="email" required name="email" class="input" placeholder="Email.."><br><br>
+
+            <label for="username" name="username">KORISNIČKO IME:    </label>
+            <input type="text" id="username" required name="username" class="input" placeholder="Ovo će biti vaše ime prilikom prijave"><br><br>
+
+            <label for="password" name="password">ŠIFRA:    </label>
+            <input type="password" id="sifra" required name="password" class="input" placeholder="Šifra.." minlength="8"><br><br>
+            
+            <label for="adresa" name="adresa">ADRESA:    </label>
+            <textarea name="adresa" id="adresa" class="input" cols="50" rows="1" placeholder="Adresa.."></textarea><br><br>
+
+            <button id="btn_prijava" type="submit" value="Posalji">REGISTRACIJA</button><br><br>
+    </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../JS/log_in.js"></script>
+    <!-- 
+        ime=Luka
+        &prezime=Drobnjak
+        &indeks=10832022
+        &pol=muski
+        &smer=isit_smer_1
+        &email=ld20221083%40student.fon.bg.ac.rs
+        &password=blablabla123
+        &adresa=Tosin+Bunar+150
+     -->
+</body>
+</html>
